@@ -1,0 +1,20 @@
+This paper has twenty sentences and so if 4 or more of them are plagiarized the program will give it a 10 on a 1-10 scale of how likely it is to have been plagiarized (this means 20% or more of the paper's sentences are in the sources). 
+These sentences will each flag one instance of plagiarism in the code since it strips sentences of whitespaces and periods and uses "in" to see if they are within the sources from the wikipedia page. 
+The algorithm will also flag sentences ending in an exclamation point or question mark and all flags will not count if the flagged instance is less than 7 words. 
+If a sentence is quoted, the plagiarism software will not pick it up because the quotes will not be an exact match based on the way the items get split.
+Moreover, the detection algorithm will clear if even 1 word does not match exactly. 
+There may be instances in which the way a sentence was written makes one question plagiarism, and for such cases the program keeps track of all sentences in question. 
+The algorithm will also output a list of matches and it can be manually reviewed where those fall in the text. 
+The final score for whether something is plagiarized or not is a relative score. 
+The program determines how many instances of plagiarism there are relative to the number of lines. 
+If this number exceeds 20%, the program will give the highest rating of a 10 on a 1-10 plagiarism scale which would indicate strong suspicion of plagiarism. 
+In really long papers, it is unlikely to get above a 1-3 which acknowledges that although the algorithm did flag some potential instances, that it is very unlikely to have been plagiarized. 
+Now that the overview of how this code works is done, let's plagiarize some more from the Python Wikipedia page! 
+The next four sentences are plagiarized. 
+Python is an interpreted high-level general-purpose programming language. 
+Its design philosophy emphasizes code readability with its use of significant indentation.
+Python 3.0 was released in 2008 and was a major revision of the language that is not completely backward-compatible. 
+Python consistently ranks as one of the most popular programming languages.
+Because this paper has twenty sentences in it, the program should label it a "10" on the plagiarism scale since that equates to 20% of the paper being plagiarized.
+The reason each of these sentences get flagged is because they are word for word matches and, once stripped of periods and whitespaces, the program finds them in the paragraph text and marks them down.
+If all these sentences were below 7 words, they would not get flagged.
